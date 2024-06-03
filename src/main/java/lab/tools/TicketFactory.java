@@ -108,34 +108,34 @@ public class TicketFactory {
             if (x == 0.0f) countOfNullFields++;
             if (y == 0.0f) countOfNullFields++;
 
-            Integer idVenue = builder[3] != null && Integer.parseInt(builder[3]) > 0 ? Integer.parseInt(builder[4]) : null;
+            Integer idVenue = builder[3] != null && Integer.parseInt(builder[3]) > 0 ? Integer.parseInt(builder[3]) : null;
             if (idVenue == null) countOfNullFields++;
-            String nameVenue = builder[4] != null ? builder[5] : null;
+            String nameVenue = builder[4] != null ? builder[4] : null;
             if (nameVenue == null) countOfNullFields++;
-            Long capacity = builder[6] != null && Long.parseLong(builder[6]) > 0 ? Long.parseLong(builder[6]) : 0L;
+            Long capacity = builder[5] != null && Long.parseLong(builder[5]) > 0 ? Long.parseLong(builder[5]) : 0L;
             if (capacity == 0L) countOfNullFields++;
-            String typeVenueString = builder[7] != null ? builder[7] : null;
+            String typeVenueString = builder[6] != null ? builder[6] : null;
             VenueType typeVenue = typeVenueString != null ? VenueType.valueOf(typeVenueString.toUpperCase()) : null;
             if (typeVenue == null) countOfNullFields++;
 
-            Integer id = builder[8] != null && Integer.parseInt(builder[8]) > 0 ? Integer.parseInt(builder[8]) : null;
+            Integer id = builder[7] != null && Integer.parseInt(builder[7]) > 0 ? Integer.parseInt(builder[8]) : null;
             if (id == null) countOfNullFields++;
-            String name = builder[9] != null ? builder[9] : null;
+            String name = builder[8] != null ? builder[8] : null;
             if (name == null) countOfNullFields++;
 
-            String creationDateString = builder[10];
+            String creationDateString = builder[9];
             ZonedDateTime creationDate = creationDateString != null ? ZonedDateTime.parse(creationDateString) : null;
             if (creationDateString == null) countOfNullFields++;
-            float price = Float.parseFloat(builder[11]) > 0 ? Float.parseFloat(builder[11]) : 0.0f;
+            float price = Float.parseFloat(builder[10]) > 0 ? Float.parseFloat(builder[10]) : 0.0f;
             if (price == 0.0f) countOfNullFields++;
-            Double discount = builder[12] != null ?
-                    (Double.parseDouble(builder[12]) > 0 && Double.parseDouble(builder[12]) <= 100 ?
-                            Double.parseDouble(builder[12]) : null) :
+            Double discount = builder[11] != null ?
+                    (Double.parseDouble(builder[11]) > 0 && Double.parseDouble(builder[11]) <= 100 ?
+                            Double.parseDouble(builder[11]) : null) :
                     null;
             if (discount == null) countOfNullFields++;
 
 
-            String refundableObj = builder[13].trim().toLowerCase();
+            String refundableObj = builder[12].trim().toLowerCase();
             Boolean refundable = null;
             if (refundableObj.equals("true")) {
                 refundable = true;
@@ -145,7 +145,7 @@ public class TicketFactory {
                 refundable = null;
                 countOfNullFields++;
             }
-            String typeString = builder[14] != null ? (String) builder[14] : null;
+            String typeString = builder[13] != null ?  builder[13] : null;
             TicketType type = typeString != null ? TicketType.valueOf(typeString.toUpperCase()) : null;
             if (typeString == null) countOfNullFields++;
 

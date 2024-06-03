@@ -47,7 +47,7 @@ CREATE TABLE Tickets (
     venue INT REFERENCES Venue(id)
 );
 INSERT INTO Users (username, passwordHash)
-VALUES ('Masha',12345);
+VALUES ('s408622',12345);
 
 INSERT INTO Venue (id, name, capacity, type)
 VALUES (15, 'ZenitArena', 10000,'STADIUM'),
@@ -58,6 +58,6 @@ VALUES (10, 20),
 (14, 3);
 
 INSERT INTO Tickets (owner, name, coordinates, creationDate, price, discount, refundable, type, venue)
-VALUES ('Masha', 'Gorgorod', 1, CURRENT_TIMESTAMP, 100.0, 10, FALSE, 'VIP', 15),
-('Masha', 'FataMorgana', 2, CURRENT_TIMESTAMP, 590.0, 1, FALSE,'USUAL', 239);
+VALUES ('s408622', 'Gorgorod', 1, CURRENT_TIMESTAMP, 100.0, 10, FALSE, 'VIP', 15),
+('s408622', 'FataMorgana', 2, CURRENT_TIMESTAMP, 590.0, 1, FALSE,'USUAL', 239);
 

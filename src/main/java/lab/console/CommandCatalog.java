@@ -70,7 +70,7 @@ public class CommandCatalog {
     }
 
     /**
-     * Command showing information about the current state of a collection {@link InfoCommand}
+
      *
      * @see TicketCollection
      */
@@ -80,7 +80,7 @@ public class CommandCatalog {
     }
 
     /**
-     * Command to call up descriptions of all commands{@link HelpCommand}
+
      */
     public void help() {
         for (Command com : commands.values()) {
@@ -89,7 +89,7 @@ public class CommandCatalog {
     }
 
     /**
-     * A command that prints to the console all objects in a collection and their fields {@link ShowCommand}
+
      */
     public void show() {
         System.out.println("Коллекция: ");
@@ -97,7 +97,7 @@ public class CommandCatalog {
 
     }
     /**
-     * Command to exit the application {@link ExitCommand}
+
      */
     public void exit() {
         System.out.println("Конец текущей сессии");
@@ -105,7 +105,7 @@ public class CommandCatalog {
     }
 
     /**
-     * Command to clear a collection {@link ClearCommand}
+     *
      */
     public void clear() {
         if(collection.getUsersTickets(user)!=null) {
@@ -119,7 +119,7 @@ public class CommandCatalog {
         else System.out.println("Элементов, созданных вами нет в коллекции");}
 
     /**
-     * Command to show last 13 commands {@link HistoryCommand}
+
      */
     public void history() {
         if (commandHistory.isEmpty()) {
@@ -135,7 +135,7 @@ public class CommandCatalog {
     /**
      * A command that creates an object of the {@link ScriptManager} class and starts the script process
      *
-     * @see ExecuteScriptCommand
+
      */
     public void executeScript() {
         try {
@@ -175,7 +175,7 @@ public class CommandCatalog {
     }
 
     /**
-     * A command that allows you to print fields from collection descending discount {@link PrintFieldDescendingDiscountCommand}
+
      */
     public void printFieldDescendingDiscount() {
         List<Ticket> sortable = new ArrayList<>(collection.getCollection().values());
@@ -189,7 +189,7 @@ public class CommandCatalog {
     }
 
     /**
-     * A command that allows you to remove elements smaller than the one specified by key {@link RemoveLowerKeyCommand}
+
      */
     public void removeLowerKey() {
         boolean flag=false;
@@ -222,7 +222,7 @@ public class CommandCatalog {
     }
 
     /**
-     * A command that allows you to remove elements smaller than the one specified  {@link RemoveLowerCommand}
+
      */
     public void removeLower() {
         try {
@@ -258,16 +258,14 @@ public class CommandCatalog {
 
 
     /**
-     * Command that saves the current collection instance to a file{@link SaveCommand}
-     *
-     * @see DatabaseWriter
+
      */
     public void save() {
       //  writer.writeToFile(collection, firstFilePath);
     }
 
     /**
-     * A command that allows you to insert a new object in the collection {@link InsertCommand}
+
      */
     public void insert() {
         boolean flag = false;
@@ -301,7 +299,7 @@ public class CommandCatalog {
     }
 
     /**
-     * A command that allows you to delete an object by its key {@link RemoveKeyCommand}
+     *
      */
     public void removeKey() {
         boolean flag = false;
@@ -327,7 +325,7 @@ public class CommandCatalog {
     }
 
     /**
-     * A command that allows you to update an object with a given id {@link UpdateIdCommand}
+
      */
     public void updateId() {
         boolean flag = false;
@@ -364,7 +362,7 @@ public class CommandCatalog {
     }
 
     /**
-     * Command that allows you to count sum of price for all objects in collection{@link SumOfPriceCommand}
+
      */
     public void sumOfPrice() {
         double totalPrice = 0;
@@ -377,7 +375,7 @@ public class CommandCatalog {
 
 
     /**
-     * A command that removes items from a collection that have such name{@link FilterContainsNameCommand}
+
      */
     public void filterContainsName() {
         String input;

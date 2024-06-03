@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.postgresql:postgresql:42.2.24")
+    implementation("org.postgresql:postgresql:42.7.3")
 }
 
 tasks.withType<JavaCompile> {
